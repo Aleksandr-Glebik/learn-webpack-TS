@@ -1,3 +1,9 @@
-console.log('hello world from TS')
-console.log('webpack dev server ')
-console.log('fantastic')
+import {formData} from './forms'
+
+const form = document.querySelector('form')!
+
+form.addEventListener('submit', (event) => {
+    event.preventDefault()
+    const data = formData(form)
+    console.log(data);
+})
